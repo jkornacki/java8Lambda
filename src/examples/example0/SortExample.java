@@ -1,14 +1,15 @@
-package examples.example1;
+package examples.example0;
 
 import domain.Person;
 import examples.service.PersonGenerator;
 
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+public class SortExample {
 
-public class SortCompareThen {
+    static int abc = 1;
+
 
     public static void main(String[] args) {
         PersonGenerator personGenerator = new PersonGenerator();
@@ -18,11 +19,20 @@ public class SortCompareThen {
         System.out.println("Przed sortowaniem");
 
         persons.forEach(System.out::println);
-
-        Collections.sort(persons, Comparator.comparing(Person::getAge).thenComparing(Comparator.comparing(Person::getLastName)));
+        //Old way
+        persons.sort( new Comparator<Person>() {
+                    @Override
+                    public int compare(Person o1, Person o2) {
+                        return o1.getAge().compareTo(o2.getAge());
+                    }
+                }
+        );
+        //New way
+        persons.sort((Person p1, Person p2) -> p1.getAge().compareTo(p1.getAge()));
 
         System.out.println("Po sortowaniu");
         persons.forEach(System.out::println);
+
 
     }
 }

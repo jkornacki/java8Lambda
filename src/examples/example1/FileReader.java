@@ -1,4 +1,4 @@
-package examples.example3;
+package examples.example1;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -12,6 +12,18 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class FileReader {
+
+    class Line {
+        private String line;
+        public Line(String line) {
+            super();
+            this.line = line;
+        }
+        public String getLine() {
+            return line;
+        }
+
+    }
 
 	public List<Line> readFileOldWay(File f) throws IOException {
 		List<Line> res = new ArrayList<Line>();
@@ -31,18 +43,4 @@ public class FileReader {
 					.map(l -> new Line(l))
 					.collect(Collectors.toList());
 	}
-}
-
-final class Line {
-	private String line;
-
-	public Line(String line) {
-		super();
-		this.line = line;
-	}
-
-	public String getLine() {
-		return line;
-	}
-
 }

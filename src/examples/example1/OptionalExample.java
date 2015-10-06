@@ -1,4 +1,4 @@
-package examples.example3;
+package examples.example1;
 import java.util.Optional;
 
 public class OptionalExample {
@@ -26,32 +26,13 @@ public class OptionalExample {
 		} else {
 			return str;
 		}
-	}	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	}
 
 	public String returnEmptyIfEmptyNew(String str) {
 		return Optional.ofNullable(str)
 				.filter(val -> !val.equals(""))
 				.orElse("Empty");
 	}
-	
-	
-	
-	
-	
 	
 	public String returnEmptyIfEmptyNameBetween(String str) {
 		Optional<String> optional = Optional.ofNullable(str);

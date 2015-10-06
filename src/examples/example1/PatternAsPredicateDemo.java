@@ -9,18 +9,18 @@ public class PatternAsPredicateDemo {
 	public static void main(String[] args) {
 		List<String> progLangs = Arrays.asList("c#", "java", "python", "scala");
 		
-		Pattern p = Pattern.compile("a.a");
+		Pattern pattern = Pattern.compile("a.a");
 		
 		// old way
         for (String lang : progLangs) {
-        	if (p.matcher(lang).find()) {
+        	if (pattern.matcher(lang).find()) {
         		System.out.println(lang);
         	}
         }
 		
 		// example1 way
         progLangs.stream()
-        	.filter(p.asPredicate())
+        	.filter(pattern.asPredicate())
         	.forEach(System.out::println);
 	}
 }
