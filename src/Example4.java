@@ -19,18 +19,12 @@ public class Example4 {
 
         System.out.println("Przed sortowaniem");
 
-        persons.forEach(
-                (person -> {
-                    System.out.println(person);
-                }));
+        persons.forEach(System.out::println);
 
         Collections.sort(persons, Comparator.comparing(Person::getAge).thenComparing(Comparator.comparing(Person::getLastName)));
 
         System.out.println("Po sortowaniu");
-        persons.forEach(
-                (person -> {
-                    System.out.println(person);
-                }));
+        persons.forEach(System.out::println);
 
     }
 }

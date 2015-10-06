@@ -8,9 +8,8 @@ import java.util.function.Consumer;
  * Created by P on 2015-10-05.
  */
 public class Example2 {
-    public static Consumer<Person> consumer = person -> {
-        System.out.println(person);
-    };
+
+    public static Consumer<Person> consumer = System.out::println;
 
     public static void main(String[] args) {
         PersonGenerator personGenerator = new PersonGenerator();
