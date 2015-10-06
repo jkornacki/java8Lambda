@@ -19,6 +19,7 @@ public class FunctionalInterface {
             System.out.println("ABC");
         };
         newInterface.dispaly();
+        newInterface.defaultMetod();
 
         Test test = new Test();
         test.dispaly();

@@ -18,7 +18,9 @@ public class ThreadExample {
 
         thread.start();
 
-        Thread thread2 = new Thread(() -> System.out.println("Lambdas are cool"));
+        Thread thread2 = new Thread(() -> {
+            System.out.println("Lambdas are cool");
+        });
 
         thread2.start();
     }

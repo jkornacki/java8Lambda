@@ -1,6 +1,7 @@
 package examples.example1;
 
 import java.math.BigInteger;
+import java.util.ArrayList;
 import java.util.stream.IntStream;
 
 public class ParallelStreamDemo {
@@ -10,6 +11,7 @@ public class ParallelStreamDemo {
 		for (int i = 1; i <= n; i++) {
 			result = result.multiply(BigInteger.valueOf(i));
 		}
+
         return result;
 	}
 	

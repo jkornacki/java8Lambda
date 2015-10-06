@@ -1,10 +1,15 @@
 package examples.example1;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 
 public class OptionalExample {
 
 
 	public static void main(String[] args) {
+
+        Map<String,String> map = new HashMap<>();
+
 		OptionalExample o = new OptionalExample();
 		
 		String a = "";
@@ -36,6 +41,7 @@ public class OptionalExample {
 	
 	public String returnEmptyIfEmptyNameBetween(String str) {
 		Optional<String> optional = Optional.ofNullable(str);
+
 		if (!optional.isPresent() || optional.get().equals("")) {
 			return "Empty";
 		} else {

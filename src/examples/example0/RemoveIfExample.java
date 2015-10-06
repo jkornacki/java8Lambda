@@ -19,15 +19,15 @@ public class RemoveIfExample {
                 new Developer("Tom", "Wood", 41, Language.JAVA, Language.JAVA_SCRIPT, Language.SCALA),
                 new Developer("Michael", "Beer", 36, Language.JAVA));
         
-        // old way
-        for (Iterator<Developer> it = developers1.iterator(); it.hasNext(); ) {
-            Developer d = it.next();
-            if (!d.getProgrammingLanguages().contains(Language.JAVA)) {
-                it.remove();
-            }
-        }
-        
-        System.out.println(developers1);
+//        // old way
+//        for (Iterator<Developer> it = developers1.iterator(); it.hasNext(); ) {
+//            Developer d = it.next();
+//            if (!d.getProgrammingLanguages().contains(Language.JAVA)) {
+//                it.remove();
+//            }
+//        }
+//
+//        System.out.println(developers1);
 
         List<Developer> developers2 = Arrays.asList(
                 new Developer("John", "Scott", 20, Language.JAVA, Language.SCALA),

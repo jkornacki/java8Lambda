@@ -9,7 +9,9 @@ import static java.util.Arrays.asList;
 public class ListRemoveIfDemo {
 	
 	public static void main(String[] args) {
-		List<String> progLangs1 = new ArrayList<>(asList("c#", "java", "python", "scala"));
+		List<String> progLangs1 = new ArrayList<>(
+                asList("c#", "java", "python", "scala")
+        );
 		List<String> progLangs2 = new ArrayList<>(progLangs1);
 		
 		// old way

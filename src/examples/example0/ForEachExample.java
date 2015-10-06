@@ -1,10 +1,10 @@
 package examples.example0;
 
-import domain.Person;
-import examples.service.PersonGenerator;
-
 import java.util.List;
 import java.util.function.Consumer;
+
+import domain.Person;
+import examples.service.PersonGenerator;
 
 public class ForEachExample {
 
@@ -15,10 +15,7 @@ public class ForEachExample {
 
         List<Person> persons = personGenerator.generateExamplePerson();
 
-        persons.forEach(
-                (p) -> {
-                    System.out.println(p);
-                });
+        persons.forEach((p) -> System.out.println(p));
 
         System.out.println("");
 

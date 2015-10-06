@@ -19,7 +19,9 @@ public class SortCompareThen {
 
         persons.forEach(System.out::println);
 
-        Collections.sort(persons, Comparator.comparing(Person::getAge).thenComparing(Comparator.comparing(Person::getLastName)));
+        Collections.sort(persons,
+                Comparator.comparing(Person::getAge)
+                        .thenComparing(Comparator.comparing(Person::getLastName)));
 
         System.out.println("Po sortowaniu");
         persons.forEach(System.out::println);

@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 
 public class FileReader {
 
-    class Line {
+    static class Line {
         private String line;
         public Line(String line) {
             super();
@@ -23,6 +23,12 @@ public class FileReader {
             return line;
         }
 
+        @Override
+        public String toString() {
+            return "Line{" +
+                    "line='" + line + '\'' +
+                    '}';
+        }
     }
 
 	public List<Line> readFileOldWay(File f) throws IOException {
@@ -38,9 +44,13 @@ public class FileReader {
 		return res;
 	}
 
-	public void readFileNewWay(File f) throws IOException {
+	public static void readFileNewWay(File f) throws IOException {
 		Files.lines(Paths.get(f.toURI()))
 					.map(l -> new Line(l))
-					.collect(Collectors.toList());
+					.collect(Collectors.toList()).forEach(System.out::println);
 	}
+
+    public static void main(String[] args) throws IOException {
+        readFileNewWay(new File("test.txt"));
+    }
 }
