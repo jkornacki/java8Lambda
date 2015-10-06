@@ -1,9 +1,11 @@
+package examples.example1;
+
 import domain.FunctionalInterfaceTest;
 
 /**
  * Created by P on 2015-10-05.
  */
-public class Example1 {
+public class FunctionalInterface {
     static class Test implements FunctionalInterfaceTest {
 
         @Override

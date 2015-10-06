@@ -5,7 +5,6 @@ import domain.User;
 
 import java.util.Optional;
 
-import static java.lang.System.out;
 
 
 public class OptionalDemo {
@@ -22,7 +21,7 @@ public class OptionalDemo {
 		Optional<User> optUser1 = getUserById(1);
 		Optional<User> optUser2 = getUserById(2);
 		
-		optUser1.map(u -> u.getLogin()).ifPresent(out::println);
-		optUser2.map(u -> u.getLogin()).ifPresent(out::println);
+		optUser1.map(u -> u.getLogin()).ifPresent(System.out::println);
+		optUser2.map(u -> u.getLogin()).ifPresent(System.out::println);
 	}
 }

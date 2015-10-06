@@ -1,7 +1,7 @@
-package examples.example3;
+package examples.example2;
 
-import examples.example2.Developer;
-import examples.example2.Language;
+import domain.Developer;
+import domain.Language;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package examples.example2;
+package domain;
 
 /**
  * Created by P on 2015-10-06.

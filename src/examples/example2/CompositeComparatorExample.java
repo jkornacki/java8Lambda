@@ -1,6 +1,6 @@
-package examples.example3;
+package examples.example2;
 
-import examples.example2.Developer;
+import domain.Developer;
 
 import java.util.Comparator;
 

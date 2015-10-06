@@ -6,10 +6,6 @@ import java.util.Comparator;
 import java.util.List;
 
 
-
-/**
- * Created by P on 2015-10-05.
- */
 public class Example4 {
 
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package examples.example3;
+package examples.example2;
 
 /**
  * Simple thread example

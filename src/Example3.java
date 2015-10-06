@@ -4,9 +4,6 @@ import examples.service.PersonGenerator;
 import java.util.Comparator;
 import java.util.List;
 
-/**
- * Created by P on 2015-10-05.
- */
 public class Example3 {
 
     static int abc = 1;

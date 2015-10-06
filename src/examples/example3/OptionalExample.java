@@ -1,68 +1,64 @@
 package examples.example3;
+import java.util.Optional;
 
-/**
- * Example with optional
- *
- * @author toto
- */
 public class OptionalExample {
 
-    public static void main(String[] args) {
-        /*Computer computer = new Computer();
-        computer.setSoundcard(new Soundcard());
 
-        String version = "UNKNOWN";
-        if(computer != null){
-            Soundcard soundcard = computer.getSoundcard();
-            if(soundcard != null){
-                USB usb = soundcard.getUSB();
-                if(usb != null){
-                    version = usb.getVersion();
-                }
-            }
-        }*/
+	public static void main(String[] args) {
+		OptionalExample o = new OptionalExample();
+		
+		String a = "";
+		String b = null;
+		String c = "Test";
 
-        //System.out.println(computer.getSoundcard().getUSB().getVersion());
+		System.out.println(o.returnEmptyIfEmptyOld(a));
+		System.out.println(o.returnEmptyIfEmptyOld(b));
+		System.out.println(o.returnEmptyIfEmptyOld(c));
 
+		System.out.println(o.returnEmptyIfEmptyNew(a));
+		System.out.println(o.returnEmptyIfEmptyNew(b));
+		System.out.println(o.returnEmptyIfEmptyNew(c));
+	}
+	
+	public String returnEmptyIfEmptyOld(String str) {
+		if (str == null || str.equals("")) {
+			return "Empty";
+		} else {
+			return str;
+		}
+	}	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
-
-    }
-
-
-}
-
-class Computer {
-    private Soundcard soundcard;
-
-    public Soundcard getSoundcard() {
-        return soundcard;
-    }
-
-    public void setSoundcard(Soundcard soundcard) {
-        this.soundcard = soundcard;
-    }
-}
-
-class Soundcard {
-    private USB usb;
-
-    public USB getUSB() {
-        return usb;
-    }
-
-    public void setUsb(USB usb) {
-        this.usb = usb;
-    }
-}
-
-class USB {
-    private String version;
-
-    public String getVersion() {
-        return version;
-    }
-
-    public void setVersion(String version) {
-        this.version = version;
-    }
+	public String returnEmptyIfEmptyNew(String str) {
+		return Optional.ofNullable(str)
+				.filter(val -> !val.equals(""))
+				.orElse("Empty");
+	}
+	
+	
+	
+	
+	
+	
+	public String returnEmptyIfEmptyNameBetween(String str) {
+		Optional<String> optional = Optional.ofNullable(str);
+		if (!optional.isPresent() || optional.get().equals("")) {
+			return "Empty";
+		} else {
+			return str;
+		}		
+	}
 }

@@ -16,14 +16,14 @@ public class ParallelStreamDemo {
 	public static BigInteger bigFactorialSequentialStream(int n) {
         return IntStream.rangeClosed(1, n)
             	.mapToObj(i -> BigInteger.valueOf(i))
-            	.reduce(BigInteger.ONE, (a, b) -> a.multiply(b));
+            	.reduce((a, b) -> a.multiply(b)).get();
 	}
 	
 	public static BigInteger bigFactorialParallelStream(int n) {
         return IntStream.rangeClosed(1, n)
         		.parallel()
             	.mapToObj(i -> BigInteger.valueOf(i))
-            	.reduce(BigInteger.ONE, (a, b) -> a.multiply(b));
+            	.reduce((a, b) -> a.multiply(b)).get();
 	}
 	
 	public static void time(String name, Runnable task) {

@@ -1,4 +1,4 @@
-package examples.example2;
+package domain;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,14 +12,24 @@ public class Developer {
     private String lastName;
     private String firstName;
 
-    public Developer(String lastName, String firstName,Integer age, Language... languages  ) {
+    public Developer(String lastName, String firstName, Integer age, Language... languages) {
         this.age = age;
         this.programmingLanguages = new ArrayList<>();
-        for(Language language: languages) {
+        for (Language language : languages) {
             programmingLanguages.add(language);
         }
         this.lastName = lastName;
         this.firstName = firstName;
+    }
+
+    @Override
+    public String toString() {
+        return "Developer{" +
+                "age=" + age +
+                ", programmingLanguages=" + programmingLanguages +
+                ", lastName='" + lastName + '\'' +
+                ", firstName='" + firstName + '\'' +
+                '}';
     }
 
     public Integer getAge() {
