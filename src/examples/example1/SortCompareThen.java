@@ -1,3 +1,5 @@
+package examples.example1;
+
 import domain.Person;
 import examples.service.PersonGenerator;
 
@@ -6,7 +8,7 @@ import java.util.Comparator;
 import java.util.List;
 
 
-public class Example4 {
+public class SortCompareThen {
 
     public static void main(String[] args) {
         PersonGenerator personGenerator = new PersonGenerator();

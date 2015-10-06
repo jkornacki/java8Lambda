@@ -1,10 +1,12 @@
+package examples.example1;
+
 import domain.Person;
 import examples.service.PersonGenerator;
 
 import java.util.List;
 import java.util.function.Consumer;
 
-public class Example2 {
+public class ForEachExample {
 
     public static Consumer<Person> consumer = System.out::println;
 

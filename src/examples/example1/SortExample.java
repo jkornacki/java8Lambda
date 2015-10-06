@@ -1,10 +1,12 @@
+package examples.example1;
+
 import domain.Person;
 import examples.service.PersonGenerator;
 
 import java.util.Comparator;
 import java.util.List;
 
-public class Example3 {
+public class SortExample {
 
     static int abc = 1;
 
