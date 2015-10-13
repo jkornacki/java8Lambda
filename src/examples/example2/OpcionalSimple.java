@@ -1,16 +1,16 @@
-package examples.example1;
+package examples.example2;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
-public class OptionalExample {
+public class OpcionalSimple {
 
 
 	public static void main(String[] args) {
 
         Map<String,String> map = new HashMap<>();
 
-		OptionalExample o = new OptionalExample();
+		OpcionalSimple o = new OpcionalSimple();
 		
 		String a = "";
 		String b = null;
