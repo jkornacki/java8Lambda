@@ -3,10 +3,12 @@ package examples.example2;
 
 import domain.Developer;
 import domain.Language;
+import examples.service.DeveloperService;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 /**
  * Developer predicates
@@ -24,8 +26,17 @@ public class DeveloperPredicates {
 	public static Predicate<Developer> isAdult() {
 		return d -> d.getAge() >= 18;
 	}
-	
-	/**
+
+    public static void main(String[] args) {
+        DeveloperService developerService = new DeveloperService();
+        List<Developer>  developers = developerService.getDevelopers();
+
+        List<Developer> javaDevelopers = developers.stream().filter(isJavaDeveloper()).collect(Collectors.toList());
+
+        javaDevelopers.forEach(System.out::println);
+    }
+
+    /**
 	 * Is developer older than @param age
 	 * 
 	 * @return

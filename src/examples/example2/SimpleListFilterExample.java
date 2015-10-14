@@ -22,7 +22,7 @@ public class SimpleListFilterExample {
 	 * @return
 	 */
 	public List<Developer> filterJavaDevelopers(List<Developer> developers) {
-		List<Developer> javaDevelopers = new ArrayList<Developer>();
+		List<Developer> javaDevelopers = new ArrayList<>();
 
 		for (Developer dev : developers) {
 			if (dev.getProgrammingLanguages().contains(Language.JAVA)) {

@@ -40,9 +40,9 @@ public class ReduceExample {
      * Get sum of developers age
      */
     public void getSumOfAge() {
-        Integer ageSum = developers
-                .stream()
-                .reduce(0, (sum, d) -> sum += d.getAge(), (sum1, sum2) -> sum1 + sum2);
+         int ageSum = developers.stream()
+                 .map(Developer::getAge)
+                 .reduce(0, (sum, d) -> sum += d);
 
         System.out.println(ageSum);
     }
